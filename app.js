@@ -100,9 +100,9 @@ function go(id,scroll=false){
   document.documentElement.style.setProperty('--day-color',d?.color||'#0071e3');
   document.querySelectorAll('.tab').forEach(b=>{const active=Number(b.dataset.day)===cur;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
   $('content').innerHTML=id===0?overview():renderDay(d);
-  resizeMapByScroll();drawMap();
-  if(scroll)window.scrollTo({top:Math.round(viewportHeight*.4),behavior:'smooth'});
   const b=document.querySelector(`.tab[data-day="${id}"]`);if(b)b.scrollIntoView({block:'nearest',inline:'nearest'});
+  if(scroll)window.scrollTo({top:Math.round(viewportHeight*.4),behavior:'auto'});
+  resizeMapByScroll();drawMap();
 }
 const labels=[{id:0,label:'总览',weekday:'五天' },...T.days];
 $('tabs').innerHTML=labels.map(d=>`<button class="tab ${d.id===0?'active':''}" data-day="${d.id}" aria-pressed="${d.id===0}">${d.label}<small>${d.weekday}</small></button>`).join('');
