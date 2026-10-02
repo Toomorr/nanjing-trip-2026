@@ -1,0 +1,7 @@
+skills/
+.DS_Store
+qa/
+drafts/
+node_modules/
+*.log
+.env*
