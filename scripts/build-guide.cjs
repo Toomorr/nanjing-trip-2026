@@ -5,7 +5,7 @@ vm.runInNewContext(fs.readFileSync(path.join(root,'trip-data.js'),'utf8'),contex
 const t=context.window.TRIP;
 const lines=[`# ${t.title} · ${t.dates}`,'',`行程进展同步：${t.updatedAt}。`,'',t.overviewIntro,'',
  '10月2日下午已到南京，3日已入住南京玄武湖桔子水晶酒店，鼓楼区湖南路18号，6日离店。去程G743，北京南13:04出发、南京南16:34到达；返程G726，南京南18:31出发、北京南23:02到达。公开攻略不包含乘车座位、订单号或预约凭证。','',
- '已预约：4号中山陵下午场、5号总统府上午场、6号南京博物院上午场。5号富临轩私房菜已订，12:30到店。红山和苗乡继续保留，5号不再启用会覆盖新预约的旧日出补觉方案。','',
+ `已预约：4号中山陵下午场、5号总统府上午场、6号南京博物院上午场。5号${t.places.fulin.name}已订，12:30到店。红山和苗乡继续保留，5号不再启用会覆盖新预约的旧日出补觉方案。`,'',
  '## 已完成的经历',''];
 for(const x of t.progressSummary)lines.push(`**${x.title}**`,'',x.desc,'');
 lines.push('餐食店名不清时按用户口述保留，未猜测门店；未收到完成反馈的原计划不标成已去过。','');
