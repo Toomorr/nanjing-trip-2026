@@ -3,7 +3,7 @@ const T = window.TRIP;
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const external = (url,label,cls='') => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)}</a>`;
-function appleMapLink(p,directions=false){return `https://maps.apple.com/?${directions?'daddr':'q'}=${encodeURIComponent(p.search||'南京 '+p.name+' '+p.address)}`;}
+function appleMapLink(p,directions=false){return `https://maps.apple.com/?${directions?'daddr':'q'}=${encodeURIComponent(p.mapSearch||p.search||'南京 '+p.name+' '+p.address)}`;}
 function appleNav(p,label='苹果地图 ↗',cls=''){return `<a class="btn nav ${cls}" data-apple-map="${esc(p.id)}" href="${esc(appleMapLink(p))}">${esc(label)}</a>`;}
 const defaultState = () => ({day2:'river',day4:'full',sunrise:false,done:[]});
 let state = defaultState();

@@ -380,7 +380,8 @@ window.TRIP = {
       "coordinateSystem": "WGS84",
       "positionNote": "夫子庙街区参考点；公共街道散步不等于购买大成殿或游船门票。",
       "positionSource": "https://www.openstreetmap.org/way/590937998",
-      "search": "南京 夫子庙 · 秦淮河夜景"
+      "search": "南京 夫子庙 · 秦淮河夜景",
+      "mapSearch": "南京夫子庙步行街"
     },
     "taicheng": {
       "id": "taicheng",
@@ -393,6 +394,7 @@ window.TRIP = {
       "positionNote": "标点在解放门，用作下城/登城参考。由玄武门上城后沿湖向解放门走，现场核对开放登城口。",
       "positionSource": "https://www.openstreetmap.org/way/1061607219",
       "search": "南京 南京城墙 · 台城短段",
+      "mapSearch": "南京解放门 鸡鸣寺路",
       "official": "https://weibo.com/2/detail/5346273911638454",
       "sources": [
         "wall",
@@ -411,6 +413,7 @@ window.TRIP = {
       "positionNote": "中华门瓮城参考点，不是中华门地铁站或铁路站；入园按中华门北门指引。",
       "positionSource": "https://www.openstreetmap.org/relation/11308636",
       "search": "南京 中华门瓮城",
+      "mapSearch": "南京中华门瓮城 北门 中华路南端",
       "official": "https://weibo.com/2/detail/5346273911638454",
       "sources": [
         "wall"
